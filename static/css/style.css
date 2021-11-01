@@ -1,0 +1,17 @@
+.jumbotron{
+    background-image: url('/static/img/mainHeader.jpg');
+    background-position: center;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+body{
+    font-family: Arial;
+}
+
+#navbarrr a{
+    font-size: 1.8em;
+    margin: 0 0 0 60px;
+}
+#navbarrr a:hover{
+    background-color: #b6b6b6;
+}

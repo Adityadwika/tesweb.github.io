@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="" content="">
+        <title>{{ title }}</title>
+    <!-- Css bootstrap & style css lain" -->
+        {% include "snippets/style.html" %}
+   <!--Css custom-->
+        <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" />
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        {% include "snippets/navbar.html" %}
+    
+        <!--Jumbotron-->
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container" style="margin-top: 80px;">
+  <h1 class="display-4 text-white font-weight-bold">{{ title }}</h1>
+  <p class="lead text-white">{{ heading }}</p>
+  <hr class="my-4">
+  <p class="text-white">I am a beginner programming, don't forget to subscribe to my Youtube channel.Thank you...</p>
+  <p class="lead">
+    <a class="btn btn-danger btn-lg" href="#" role="button">Subscribe</a>
+  </p>
+</div>
+</div>
+        
+        <!-- Content -->
+ <div class="container fluid" style="margin-top: -150px;">
+     <div class="container bg-secondary text-white" id="myBoddy">
+        {% block konten1 %}{% endblock %}
+     </div>
+     <div class="container bg-success text-white">
+        {% block konten2 %}{% endblock %}
+     </div>
+     <div class="container bg-danger text-white">
+        {% block konten3 %}{% endblock %}
+     </div>
+     <div class="container bg-warning text-white">
+        {% block konten4 %}{% endblock %}
+     </div>
+ </div>       
+       
+<!--Tag Kosong -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- Js bootstrap -->
+    {% include "snippets/script.html" %}
+    </body>
+</html>
